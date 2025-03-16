@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <span className="logo-text">SmartHome</span>
+          <span className="logo-text">Home</span>
         </Link>
 
         {/* Hamburger icon for mobile */}
