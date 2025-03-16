@@ -1,0 +1,13 @@
+.device-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 20px;
+    padding: 16px;
+}
+
+  
+@media (max-width: 300px) {
+    .device-grid {
+      grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}

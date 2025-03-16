@@ -1,0 +1,113 @@
+/* Navbar container */
+.navbar {
+    background-color: #1a1a2e; /* Dark blue-gray for a techy feel */
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Stays above other content */
+  }
+  
+  /* Inner container */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Logo styling */
+  .navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .logo-text {
+    color: #00adb5; /* Teal accent for "SmartHome" */
+  }
+  
+  /* Navigation menu */
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-left: 2rem;
+  }
+  
+  .nav-link {
+    color: #e0e0e0; /* Light gray for readability */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: #00adb5; /* Teal on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  /* Hamburger menu (hidden by default) */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex; /* Show hamburger on small screens */
+    }
+  
+    .nav-menu {
+      display: none; /* Hide menu by default */
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #1a1a2e;
+      padding: 1rem 0;
+    }
+  
+    .nav-menu.active {
+      display: flex; /* Show when toggled */
+    }
+  
+    .nav-item {
+      margin: 1rem 0;
+      text-align: center;
+    }
+  
+    .nav-link {
+      font-size: 1.2rem;
+    }
+  
+    /* Hamburger animation */
+    .menu-toggle.active .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .menu-toggle.active .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
